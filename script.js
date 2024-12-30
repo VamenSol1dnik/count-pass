@@ -1,8 +1,9 @@
 function countValidPasswords(passwords) {
     let validCount = 0;
 
+//*if you want to change priority, put (\w) before :, and "letter" before "password" in const [] *//
     passwords.forEach(line => {
-        const match = line.match(/(\w) (\d+)-(\d+): (\w+)/);
+        const match = line.match(/(\w) (\d+)-(\d+): (\w+)/); 
 
         if (match) {
             const [_, letter, min, max, password] = match;
